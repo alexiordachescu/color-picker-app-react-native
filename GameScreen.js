@@ -37,7 +37,7 @@ export default function GameScreen() {
       }}
     >
       <Text style={{ marginBottom: 20, fontSize: 24, fontWeight: "bold" }}>
-        Choose your color!
+        Use the phone's accelerometer to see more colors!
       </Text>
       <View style={{ marginBottom: 20 }}>
         <MyButton
