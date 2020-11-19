@@ -49,7 +49,7 @@ export default function GameScreen({ route, navigation }) {
           }}
         />
       </View>
-      <Text style={{ fontWeight: "bold", fontSize: 20 }}>
+      <Text style={{ fontWeight: "bold", fontSize: 20, marginBottom: 10 }}>
         Times I've played this game: {count}
       </Text>
       <Button

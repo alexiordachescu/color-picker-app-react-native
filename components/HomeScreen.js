@@ -9,7 +9,14 @@ export default function HomeScreen({ route, navigation }) {
     }
   }, [route.params]);
   return (
-    <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
+    <View
+      style={{
+        alignItems: "center",
+        justifyContent: "space-between",
+        flex: 1,
+        backgroundColor: "#FFDC00",
+      }}
+    >
       <Text
         style={{
           fontWeight: "bold",
@@ -19,11 +26,17 @@ export default function HomeScreen({ route, navigation }) {
       >
         Welcome to my awesome app!
       </Text>
-      <Text>Times I've been on this page: {count}</Text>
-      <Button
-        title="Go to Game"
-        onPress={() => navigation.navigate("Game", { count: count + 1 })}
-      />
+      <View style={{ alignSelf: "stretch" }}>
+        <Button
+          title="Go to Game"
+          onPress={() =>
+            navigation.navigate("Game", { screen: "Play", params: { count } })
+          }
+        />
+      </View>
+      <Text style={{ alignSelf: "center" }}>
+        Times I've been on this page: {count}
+      </Text>
     </View>
   );
 }
